@@ -21,8 +21,8 @@ class IngredienteViewSet(viewsets.ModelViewSet):
             if ingrediente.quantidade >= quantidade:
                 ingrediente.quantidade -= quantidade
                 ingrediente.save()
-                return Response({'status': 'Ingrediente reduzido'})
+                return Response({'status': 'Ingrediente reduzido!'})
             else:
-                return Response({'erro': 'Quantidade insuficiente'}, status=400)
+                return Response({'erro': 'Quantidade insuficiente!'}, status=400)
         except Ingrediente.DoesNotExist:
-            return Response({'erro': 'Ingrediente não encontrado'}, status=404)
+            return Response({'erro': 'Ingrediente não encontrado!'}, status=404)
