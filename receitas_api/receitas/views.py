@@ -31,4 +31,4 @@ class ReceitaViewSet(viewsets.ModelViewSet):
         if erros:
             return Response({'erros': erros}, status=400)
 
-        return Response({'mensagem': 'Receita cozinhada e estoque atualizado'})
+        return Response({'mensagem': 'Receita cozinhada e estoque atualizado!!'})
